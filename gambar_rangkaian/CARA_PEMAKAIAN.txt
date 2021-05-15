@@ -1,0 +1,9 @@
+Untuk dapat menjalankan program pythonnya, pertama-tama kita harus menginstall package SchemDraw
+
+langkah yang bisa dilakukan:
+	1. membuka PowerShell / CMD dan menjalankannya sebagai administrator
+	2. mengetikkan : pip install schemdraw
+	3. tunggu sampai proses instalasi selesai
+
+pada program ini, gambar dihasilkan dalam bentuk svg. Alasan mengapa dipilih format ini adalah karena pemrosesannya bisa mencapai 4 kali lebih cepat daripada membuat gambar dalam matplotlib
+tetapi jika tetap ingin menggunakan matplotlib, hapuskan baris : schemdraw.use('svg')
