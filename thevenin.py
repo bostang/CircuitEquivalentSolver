@@ -7,7 +7,7 @@ from gambar_rangkaian.gambar_rangkaian5 import rangkaian5
 from gambar_rangkaian.gambar_rangkaian6 import rangkaian6
 from gambar_rangkaian.gambar_rangkaian7 import rangkaian7
 from Module.circuit1 import circuit1
-
+from Module.circuit2 import circuit2
 
 
 def main():
@@ -50,9 +50,10 @@ def main():
         image=rangkaian1() #Memperlihatkan Circuit 1 kembali
         circuit1() #Fungsi Circuit 1
     elif cmd==2:
-        print("Gunakan Fungsi Rangkaian 2") #Rangkaian 2 sampai 7 to be added soon
+        image=rangkaian2() #Memperlihatkan Circuit 2 kembali
+        circuit2() #Fungsi Circuit 2
     elif cmd==3:
-        print("Gunakan Fungsi Rangkaian 3")
+        print("Gunakan Fungsi Rangkaian 3") # Rangkaian 3 sampai 7 to be added soon
     elif cmd==4:
         print("Gunakan Fungsi Rangkaian 4")
     elif cmd==5:
@@ -61,9 +62,10 @@ def main():
         print("Gunakan Fungsi Rangkaian 6")
     elif cmd==7:
         print("Gunakan Fungsi Rangkaian 7")
-
+    else:
+        print("Input tidak valid.")
 
 main()
 
-#untuk menjalankan: python thevenin.py 
+#untuk menjalankan: python3 thevenin.py 
 
