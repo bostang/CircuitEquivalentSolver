@@ -20,15 +20,27 @@
     # meng-import library yang diperlukan untuk menyelesaikan persamaan matriks
 import numpy as np
 import scipy.linalg as la
+from interface.interface import inp # meng-import parameter input : >>>
 
     # menerima input user
 def circuit2():
-    R1 = float(input("Masukkan nilai R1: "))
-    R2 = float(input("Masukkan nilai R2: "))
-    R3 = float(input("Masukkan nilai R3: "))
-    R4 = float(input("Masukkan nilai R4: "))
-    R5 = float(input("Masukkan nilai R5: "))
-    V1 = float(input("Masukkan nilai V1: "))
+    print("Masukkan nilai R1: ")
+    R1 = float(input(inp))
+
+    print("Masukkan nilai R2: ")
+    R2 = float(input(inp))
+
+    print("Masukkan nilai R3: ")
+    R3 = float(input(inp))
+
+    print("Masukkan nilai R4: ")
+    R4 = float(input(inp))
+
+    print("Masukkan nilai R5: ")
+    R5 = float(input(inp))
+
+    print("Masukkan nilai V1: ")
+    V1 = float(input(inp))
 
         # menyelesaikan persamaan matriks menggunakan linear algebra module pada numpy
                 # koefisien . variabel = R

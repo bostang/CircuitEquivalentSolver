@@ -1,10 +1,18 @@
 import numpy as py
+from interface.interface import inp # meng-import parameter input : >>>
 
 def circuit1():
-    V1 = int(input("Masukkan nilai V1: "))
-    R1 = int(input("Masukkan nilai R1: "))
-    R2 = int(input("Masukkan nilai R2: "))
-    R3 = int(input("Masukkan nilai R3: "))
+    print("Masukkan nilai R1: ")
+    R1 = float(input(inp))
+
+    print("Masukkan nilai R2: ")
+    R2 = float(input(inp))
+
+    print("Masukkan nilai R3: ")
+    R3 = float(input(inp))
+
+    print("Masukkan nilai V1: ")
+    V1 = float(input(inp))
 
     Rth = ((R2*R3)/(R2+R3))+R1
     Vth =(V1/R2)*((1/R1) + (1/R2))

@@ -30,7 +30,7 @@ from gambar_rangkaian.gambar_rangkaian7 import rangkaian7
 from Module.circuit1 import circuit1
 from Module.circuit2 import circuit2
     # meng-import variabel tulisan-tulisan ASCII
-from interface.ASCII_message import *
+from interface.interface import *
 
 def main():
     View= True
@@ -79,9 +79,11 @@ def main():
     if cmd==1:
         image=rangkaian1() #Memperlihatkan Circuit 1 kembali
         circuit1() #Fungsi Circuit 1
+        clrscr()
     elif cmd==2:
         image=rangkaian2() #Memperlihatkan Circuit 2 kembali
         circuit2() #Fungsi Circuit 2
+        clrscr()
     elif cmd==3:
         print("Gunakan Fungsi Rangkaian 3") # Rangkaian 3 sampai 7 to be added soon
     elif cmd==4:
