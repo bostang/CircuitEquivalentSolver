@@ -1,0 +1,4 @@
+kita tahu bahwa program utama : thevenin.py
+di program utama, interface akan sedikit "diperindah" dengan tulisan ASCII, ketimbang teks biasa.
+
+folder ini berisi tulisan-tulisan ASCII tersebut yang natinya tinggal di-import oleh program utama.
