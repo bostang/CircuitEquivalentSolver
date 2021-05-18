@@ -33,7 +33,6 @@ from Module.circuit1 import circuit1
 from Module.circuit2 import circuit2
     # meng-import modul-modul tambahan
 from interface.interface import *
-from OOP.OOP import *
 
 def main():
         # inisiasi variabel

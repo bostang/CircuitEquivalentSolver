@@ -15,10 +15,10 @@ import schemdraw.elements as elm
 
 def rangkaianThevenin(V_th,R_th):
     d = schemdraw.Drawing()
-    d += elm.Dot().label('-',loc = 'top')
+    d += elm.Dot().label('b',loc = 'top')
     d += elm.Line().left().label("")
     d += elm.SourceV().up().label(f"V_th = {V_th} V")
     d += elm.Resistor().label(f"R_th = {R_th} Ohm")
     d += elm.Line().right().label("")
-    d += elm.Dot().label('+',loc = 'bottom')
+    d += elm.Dot().label('a',loc = 'bottom')
     d.draw()
