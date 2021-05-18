@@ -1,6 +1,5 @@
 # Program TheveninEquivalent
-    # menggambar rangkaian ekuivalen thevenin
-    # rancangan primitif tugas besar PRD
+    # menggambar rangkaian ekuivalen thevenin dari rangkaian utama
 # KAMUS
     # Variabel
         # R_in : integer { nilai resistansi input }

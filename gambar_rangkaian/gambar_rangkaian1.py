@@ -10,7 +10,6 @@ import schemdraw.elements as elm
 def rangkaian1(R1,R2,R3,V1):
         # menginisiasi rangkaian
     d = schemdraw.Drawing()
-
         # menambahkan elemen pada rangkaian
     d += elm.Dot().label('a',loc = 'right')
     d += elm.Resistor().left().label(R1,loc="bottom")
@@ -24,6 +23,5 @@ def rangkaian1(R1,R2,R3,V1):
     d += elm.Resistor().down().label(R3,loc="bottom")
     d += elm.Line().right()
     d += elm.Dot().label('b',loc = 'right')
-
         # menggambar rangkaian yang telah disusun
     d.draw()

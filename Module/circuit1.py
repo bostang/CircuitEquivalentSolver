@@ -34,7 +34,7 @@ def circuit1():
     val = ((R2.nilai*R3.nilai)/(R2.nilai+R3.nilai))+R1.nilai
     Rth = resistor('Rth',val)
 
-    val =(V1.nilai/R2.nilai)*((1/R1.nilai) + (1/R2.nilai))
+    val =(V1.nilai*R3.nilai)/((R2.nilai) + (R3.nilai))
     Vth = sumberTegangan('Vth',val)
 
     print("Nilai Resistor Ekivalen adalah:",Rth.nilai)
