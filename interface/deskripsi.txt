@@ -2,3 +2,7 @@ kita tahu bahwa program utama : thevenin.py
 di program utama, interface akan sedikit "diperindah" dengan tulisan ASCII, ketimbang teks biasa.
 
 folder ini berisi tulisan-tulisan ASCII tersebut yang natinya tinggal di-import oleh program utama.
+folder ini juga berisi formatting-formatting seperti parameter input (>>> ) dan lain-lain, sehingga pemakaiannya hanya perlu melakukan import.
+
+kenapa variabel-variabel ini harus dibuat di folder/program terpisah?
+	jawab : kalau semuanya kita deklarasikan di program utama, program utama akan terlalu ramai dan terlihat seperti tempat pembuangan sampah.

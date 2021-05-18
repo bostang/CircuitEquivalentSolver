@@ -1,5 +1,5 @@
-# program rangkaian1
-    # rangkaian pertama dari program circuitEquivalentCircuit yang mau diselesaikan
+# program rangkaian2
+    # template rangkaian kedua dari program circuitEquivalentCircuit yang mau diselesaikan
 # KAMUS
     # Variabel
         # R1 : real
@@ -22,8 +22,8 @@ import numpy as np
 import scipy.linalg as la
 from interface.interface import inp # meng-import parameter input : >>>
 
-    # menerima input user
 def circuit2():
+        # menerima input user
     print("Masukkan nilai R1: ")
     R1 = float(input(inp))
 
@@ -55,3 +55,5 @@ def circuit2():
         # menampilkan output
     print("Nilai Resistor Ekivalen adalah:",Rth)
     print("Nilai Voltase Ekivalen adalah:",Vth)
+
+    return (Rth,Vth) # mengembalikan nilai Rth dan Vth supaya bisa ditampilkan gambar rangkaian ekuivalennya
