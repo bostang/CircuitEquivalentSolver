@@ -34,5 +34,3 @@ def rangkaianUtama():
     d += elm.Dot().label('b',loc = 'right')
         # menggambar rangkaian
     d.draw()
-
-rangkaianUtama()

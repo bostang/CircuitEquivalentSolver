@@ -25,7 +25,9 @@ def clrscr():
 
 # ALGORITMA UTAMA
 from os import system
+from time import sleep
     # meng-import gambar rangkaian
+from gambar_rangkaian.gambar_rangkaian0 import rangkaian0
 from gambar_rangkaian.gambar_rangkaian1 import rangkaian1
 from gambar_rangkaian.gambar_rangkaian2 import rangkaian2
 from gambar_rangkaian.gambar_rangkaian3 import rangkaian3
@@ -34,9 +36,12 @@ from gambar_rangkaian.gambar_rangkaian5 import rangkaian5
 from gambar_rangkaian.gambar_rangkaian6 import rangkaian6
 from gambar_rangkaian.gambar_rangkaian7 import rangkaian7
 from gambar_rangkaian.gambar_rangkaianThevenin import rangkaianThevenin
+from gambar_rangkaian.gambar_rangkaianUtama import rangkaianUtama
+
 from OOP.OOP import *
 
     # meng-import program penghitungan rangkaian ekuivalen Thevenin
+from Module.circuit0 import circuit0
 from Module.circuit1 import circuit1
 from Module.circuit2 import circuit2
     # meng-import modul-modul tambahan
@@ -64,13 +69,18 @@ def main():
     print("--- TEKAN ENTER ---")
     input()
     clrscr()
+        # menampilkan template utama sebleum melihat-lihat rangkaian
+    input("--- TEKAN ENTER untuk melihat rangkaian utama ---")
+    rangkaianUtama()
+
+    clrscr()
         # mulai melihat-melihat dan memilih rangkaian
     for k in range(1,3): # melakukan sebanyak dua kali karena rangkaian yang di-inputkan ada 2 template
         while View: #Loop untuk melihat Rangkaian yang tersedia
             print("Silakan tekan angka 1-7 untuk melihat rangkaian yang tersedia")
-            print(f"Masukkan 99 Jika anda ingin memilih rangkaian{k}")
+            print(f"Masukkan 99 Jika anda ingin memilih rangkaian untuk template {k}")
             print("***pilih 100 untuk keluar***")
-            gambar = int(input(">>> "))
+            gambar = int(input(inp))
             if gambar == 1:
                 image= rangkaian1(R1,R2,R3,V1)
                 clrscr() #clrscr() akan meng-"Clear Screen" prompt agar lebih enak dilihat
@@ -105,8 +115,10 @@ def main():
 
         Choose = True
         while Choose:
-            cmd=int(input("Silakan masukan angka 1-7 untuk memilih rangkaian yang akan digunakan: "))
-            if (cmd in range(1,8)): # user telah memilih rangkaian yang valid [no. 1 -- 7]
+            print(f"Silakan masukan angka 1-7 untuk memilih rangkaian yang akan digunakan sebagai template {k}:")
+            print("***pilih 0 untuk rangkaian kosong***")
+            cmd=int(input(inp))
+            if (cmd in range(0,8)): # user telah memilih rangkaian yang valid [no. 1 -- 7]
                 Choose = False
             if cmd==1:
                 image=rangkaian1(R1,R2,R3,V1) #Memperlihatkan Circuit 1 kembali
@@ -128,6 +140,10 @@ def main():
                 print("Gunakan Fungsi Rangkaian 6")
             elif cmd==7:
                 print("Gunakan Fungsi Rangkaian 7")
+            elif cmd==0:
+                image=rangkaian0()
+                Rtemp, Vtemp = circuit0()
+                clrscr()
             else:
                 print("Input tidak valid, Tekan Enter untuk melanjutkan")
                 input()
