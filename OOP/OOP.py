@@ -1,5 +1,5 @@
 # Program OOP
-    # memanfaat konsep OOP untuk membuat class komponen rangkaian
+    # memanfaatkan konsep OOP untuk membuat class komponen rangkaian
 # KAMUS
     # Variabel
     # Kelas

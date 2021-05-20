@@ -49,14 +49,14 @@ def circuit5():
     print("Masukkan nilai V1: ")
     val = float(input(inp))
     V1 = sumberTegangan('V1',val)
-    
+
         # menyelesaikan persamaan matriks menggunakan linear algebra module pada numpy
                 # koefisien . variabel = R
-    koefisien = np.array([[(1/(R1.nilai+R2.nilai+R4.nilai))+(1/R3.nilai),-(1/R3.nilai)-(1/(R1.nilai+R2.nilai+R4.nilai))],[1,-1]])
-    kanan = np.array([V1.nilai/(R1.nilai+R2.nilai+R4.nilai),4(V1.nilai)/(R1.nilai+R2.nilai+R3.nilai+R4.nilai)])
+    koefisien = np.array([[1,0],[1,-1]])
+    kanan = np.array([V1.nilai-((R1.nilai*V1.nilai)/(R1.nilai+R2.nilai+R3.nilai+R4.nilai)),R3.nilai*(V1.nilai)/(R1.nilai+R2.nilai+R3.nilai+R4.nilai)])
     variabel = np.linalg.solve(koefisien,kanan)
 
-    val = R5.nilai+(((R1.nilai+R2.nilai+R4.nilai)R3.nilai)/(R1.nilai+R2.nilai+R4.nilai+R5.nilai))
+    val = R5.nilai+(((R1.nilai+R2.nilai+R4.nilai)*R3.nilai)/(R1.nilai+R2.nilai+R4.nilai+R5.nilai))
     Rth = resistor('Rth',val)
 
     # Vth = kiri - kanan

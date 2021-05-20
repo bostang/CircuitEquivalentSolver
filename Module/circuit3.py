@@ -44,21 +44,21 @@ def circuit3():
     print("Masukkan nilai V1: ")
     val = float(input(inp))
     V1 = sumberTegangan('V1',val)
-    
+
         # menyelesaikan persamaan matriks menggunakan linear algebra module pada numpy
                 # koefisien . variabel = R
     koefisien = np.array([[-(R1.nilai+R3.nilai)/R1.nilai,(R2.nilai+R4.nilai)/R2.nilai],[-1/R1.nilai,-1/R2.nilai]])
-    kanan = np.array([V1.nilai(((R2.nilai+R4.nilai)/R2.nilai)-((R1.nilai+R3.nilai)/R1.nilai)),((V1.nilai(R1.nilai+R2.nilai+R3.nilai+R4.nilai)/((R1.nilai+R3.nilai)(R2.nilai+R4.nilai))-(1/R1.nilai)-(1/R2.nilai)))])
+    kanan = np.array([V1.nilai*(((R2.nilai+R4.nilai)/R2.nilai)-((R1.nilai+R3.nilai)/R1.nilai)),(V1.nilai*(R1.nilai+R2.nilai+R3.nilai+R4.nilai)/((R1.nilai+R3.nilai)*(R2.nilai+R4.nilai))-(1/R1.nilai)-(1/R2.nilai))])
     variabel = np.linalg.solve(koefisien,kanan)
 
-    val = ((R1.nilai+R2.nilai)(R3.nilai+R4.nilai))/(R1.nilai+R2.nilai+R3.nilai+R4.nilai)
+    val = ((R1.nilai+R2.nilai)*(R3.nilai+R4.nilai))/(R1.nilai+R2.nilai+R3.nilai+R4.nilai)
     Rth = resistor('Rth',val)
 
     # Vth = kiri - kanan
     val = variabel[0] - variabel[1]
     Vth = sumberTegangan('Vth',val)
         # menampilkan output
-    print("Nilai Resistor Ekivalen adalah:",Rth.nilai) 
+    print("Nilai Resistor Ekivalen adalah:",Rth.nilai)
     print("Nilai Voltase Ekivalen adalah:",Vth.nilai)
 
     return (Rth.nilai,Vth.nilai) # mengembalikan nilai Rth dan Vth supaya bisa ditampilkan gambar rangkaian ekuivalennya
