@@ -45,8 +45,10 @@ from Module.circuit0 import circuit0
 from Module.circuit1 import circuit1
 from Module.circuit2 import circuit2
 from Module.circuit3 import circuit3
+from Module.circuit4 import circuit4
 from Module.circuit5 import circuit5
 from Module.circuit6 import circuit6
+from Module.circuit7 import circuit7
     # meng-import modul-modul tambahan
 from interface.interface import *
 
@@ -139,7 +141,10 @@ def main():
                 rangkaianThevenin(Vtemp,Rtemp)
                 clrscr()
             elif cmd==4:
-                print("Gunakan Fungsi Rangkaian 4")
+                image=rangkaian4(R1,R2,R3,V1,V2,V3)
+                Rtemp, Vtemp = circuit4()
+                rangkaianThevenin(Vtemp,Rtemp)
+                clrscr()
             elif cmd==5:
                 image=rangkaian5(R1,R2,R3,R4,R5,V1)
                 Rtemp, Vtemp = circuit5()
@@ -151,7 +156,10 @@ def main():
                 rangkaianThevenin(Vtemp,Rtemp)
                 clrscr()
             elif cmd==7:
-                print("Gunakan Fungsi Rangkaian 7")
+                image=rangkaian7(R1,R2,R3,V1,V2,V3)
+                Rtemp, Vtemp = circuit7()
+                rangkaianThevenin(Vtemp,Rtemp)
+                clrscr()
             elif cmd==0:
                 image=rangkaian0()
                 Rtemp, Vtemp = circuit0()
