@@ -58,7 +58,7 @@ def circuit3():
     val = variabel[0] - variabel[1]
     Vth = sumberTegangan('Vth',val)
         # menampilkan output
-    print("Nilai Resistor Ekivalen adalah:",Rth.nilai)
+    print("Nilai Resistor Ekivalen adalah:",Rth.nilai) 
     print("Nilai Voltase Ekivalen adalah:",Vth.nilai)
 
     return (Rth.nilai,Vth.nilai) # mengembalikan nilai Rth dan Vth supaya bisa ditampilkan gambar rangkaian ekuivalennya
