@@ -167,6 +167,7 @@ def main():
             else:
                 print("Input tidak valid, Tekan Enter untuk melanjutkan")
                 input()
+                Rtemp, Vtemp = (0,0) # nilai sembarang agar iterasi terus dilakukan
                 clrscr()
             if k == 1 :
                 Rth1 = resistor("Rth1",Rtemp)
