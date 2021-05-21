@@ -80,6 +80,10 @@ def main():
 
     clrscr()
         # mulai melihat-melihat dan memilih rangkaian
+    input("--- TEKAN ENTER untuk melihat rangkaian yang tersedia ---")
+    printImage("tujuh_rangkaian.jpg")
+
+    clrscr()
     for k in range(1,3): # melakukan sebanyak dua kali karena rangkaian yang di-inputkan ada 2 template
         while View: #Loop untuk melihat Rangkaian yang tersedia
             print("Silakan tekan angka 1-7 untuk melihat rangkaian yang tersedia")
