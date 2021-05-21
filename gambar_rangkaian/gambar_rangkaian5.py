@@ -6,22 +6,22 @@
 import schemdraw
 import schemdraw.elements as elm
 #schemdraw.use('svg')
-def rangkaian5():
+def rangkaian5(R1,R2,R3,R4,R5,V1):
         # menginisiasi rangkaian
     d = schemdraw.Drawing()
 
         # menambahkan elemen pada rangkaian
     d += elm.Dot().label('a',loc = 'top')
     d += elm.Line().left().length(1)
-    d += elm.Resistor().left().label("R5",loc   ="top")
-    d += elm.Resistor().left().label("R1",loc   ="top")
-    d += elm.SourceV().down().reverse().label("V1")
-    d += elm.Resistor().label("R2",loc   ="top")
+    d += elm.Resistor().left().label(R5,loc   ="top")
+    d += elm.Resistor().left().label(R1,loc   ="top")
+    d += elm.SourceV().down().reverse().label(V1)
+    d += elm.Resistor().label(R2,loc   ="top")
     d += elm.Line().right()
-    d += elm.Resistor().up().label("R4",loc   ="top")
+    d += elm.Resistor().up().label(R4,loc   ="top")
     d.push()
 
-    d += elm.Resistor().up().label("R3",loc   ="top")
+    d += elm.Resistor().up().label(R3,loc   ="top")
 
     d.pop()
     d += elm.Line().right().length(4)

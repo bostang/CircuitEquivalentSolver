@@ -7,23 +7,21 @@ import schemdraw
 import schemdraw.elements as elm
 #schemdraw.use('svg')
 
-def rangkaian1():
+def rangkaian1(R1,R2,R3,V1):
         # menginisiasi rangkaian
     d = schemdraw.Drawing()
-
         # menambahkan elemen pada rangkaian
     d += elm.Dot().label('a',loc = 'right')
-    d += elm.Resistor().left().label("R1",loc="bottom")
+    d += elm.Resistor().left().label(R1,loc="bottom")
     d.push()
 
-    d += elm.Resistor().left().label("R2",loc="bottom")
-    d += elm.SourceV().down().reverse().label("V1")
+    d += elm.Resistor().left().label(R2,loc="bottom")
+    d += elm.SourceV().down().reverse().label(V1)
     d += elm.Line().right()
 
     d.pop()
-    d += elm.Resistor().down().label("R3",loc="bottom")
+    d += elm.Resistor().down().label(R3,loc="bottom")
     d += elm.Line().right()
     d += elm.Dot().label('b',loc = 'right')
-
         # menggambar rangkaian yang telah disusun
     d.draw()

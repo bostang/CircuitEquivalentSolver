@@ -1,12 +1,43 @@
+# program rangkaian1
+    # template rangkaian pertama dari program circuitEquivalentCircuit yang mau diselesaikan
+# KAMUS
+    # Variabel
+        # R1 : class :resistor
+        # R2 : class : resistor
+        # R3 : class :resistor
+        # V1 : class : sumberTegangan
+        # val : real { variabel sementara untuk menginput nilai rangkaian }
+# ALGORITMA UTAMA
+    # meng-import library yang diperlukan untuk menyelesaikan persamaan matriks
 import numpy as py
+from interface.interface import inp # meng-import parameter input : >>>
+from OOP.OOP import *
 
 def circuit1():
-    v1 = int(input("Masukkan nilai V1: "))
-    r1 = int(input("Masukkan nilai R1: "))
-    r2 = int(input("Masukkan nilai R2: "))
-    r3 = int(input("Masukkan nilai R3: "))
+        # menerima input user
+    print("Masukkan nilai R1: ")
+    val = float(input(inp))
+    R1 = resistor('R1',val)
 
-    rth = ((r2*r3)/(r2+r3))+r1
-    vth =(v1/r2)*((1/r1) + (1/r2))
-    print("Nilai Resistor Ekivalen adalah: " + str(rth))
-    print("Nilai Voltase Ekivalen adalah: " + str(vth))
+    print("Masukkan nilai R2: ")
+    val = float(input(inp))
+    R2 = resistor('R2',val)
+
+    print("Masukkan nilai R3: ")
+    val = float(input(inp))
+    R3 = resistor('R3',val)
+
+    print("Masukkan nilai V1: ")
+    val = float(input(inp))
+    V1 = sumberTegangan('V1',val)
+
+    val = ((R2.nilai*R3.nilai)/(R2.nilai+R3.nilai))+R1.nilai
+    Rth = resistor('Rth',val)
+
+    val =(V1.nilai*R3.nilai)/((R2.nilai) + (R3.nilai))
+    Vth = sumberTegangan('Vth',val)
+
+    print("Nilai Resistor Ekivalen adalah:",Rth.nilai)
+    print("Nilai Voltase Ekivalen adalah:",Vth.nilai)
+
+    return (Rth.nilai,Vth.nilai) # mengembalikan nilai Rth dan Vth supaya bisa ditampilkan gambar rangkaian ekuivalennya
