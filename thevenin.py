@@ -37,6 +37,7 @@ from gambar_rangkaian.gambar_rangkaian6 import rangkaian6
 from gambar_rangkaian.gambar_rangkaian7 import rangkaian7
 from gambar_rangkaian.gambar_rangkaianThevenin import rangkaianThevenin
 from gambar_rangkaian.gambar_rangkaianUtama import rangkaianUtama
+from gambar_rangkaian.circuit_image import printImage
 
 from OOP.OOP import *
 
