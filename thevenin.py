@@ -25,7 +25,6 @@ def clrscr():
 
 # ALGORITMA UTAMA
 from os import system
-from time import sleep
     # meng-import gambar rangkaian
 from gambar_rangkaian.gambar_rangkaian0 import rangkaian0
 from gambar_rangkaian.gambar_rangkaian1 import rangkaian1

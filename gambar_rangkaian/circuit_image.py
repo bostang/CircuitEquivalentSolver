@@ -20,4 +20,4 @@ def printImage(title):
     plt.show()
 
         # catatan : %matplotlib inline ditambahkan supaya tidak ada pesan dari matplotlib
-
+            ## %matplotlib inline hanya bisa digunakan pada jupyter-notebook, tidak pada python di console

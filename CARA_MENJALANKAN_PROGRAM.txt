@@ -1,0 +1,22 @@
+	Langkah-langkah menjalankan program
+
+1. Sebelum menjalankan program, pastikan bahwa kita telah menginstall python3 di komputer kita.
+
+2. Setelah python3 terinstall di komputer kita, pastikan python3 bisa dijalankan di console seperti CMD / Windows Powershell
+
+3. Install library yang dibutuhkan di program ini : matplotlib, schemdraw
+
+	- buka PowerShell/CMD dan jalankan sebagai administrator
+	- ketikkan : 
+				pip install matplotlib
+				pip install schemdraw
+
+4. Pindah ke folder program berada
+
+5. Buka console anda (CMD / Windows Powershell) lalu pindah ke folder tempat program berada
+
+6. Jalankan program dengan mengetikkan :
+
+				python3 thevenin.py
+
+
