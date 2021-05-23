@@ -75,7 +75,6 @@ def main():
     input()
     clrscr()
         # menampilkan template utama sebleum melihat-lihat rangkaian
-    print(" --- Dalam program ini, jika ada gambar, silakan tutup window gambar untuk melanjutkan program ---")
     input("--- TEKAN ENTER untuk melihat rangkaian utama ---")
     rangkaianUtama()
 
