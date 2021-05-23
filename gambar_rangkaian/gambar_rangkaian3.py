@@ -5,6 +5,7 @@
 # ALGORITMA UTAMA
 import schemdraw
 import schemdraw.elements as elm
+from math import sqrt
 #schemdraw.use('svg')
 def rangkaian3(R1,R2,R3,R4,V1):
         # menginisiasi rangkaian
