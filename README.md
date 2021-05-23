@@ -10,5 +10,3 @@ Anggota :
   3.  Mario Jeiba (16520280)
   4.  Nauroha Shofiyyah Nur Pirusita (16520300)
   5.  Muhammad Rifqi Riansyah Matondang (16520370)
-
-# semangat terus,kawan! kita pasti bisa menyelesaikan tugas besar ini!
